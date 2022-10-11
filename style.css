@@ -15,7 +15,7 @@
   text-align: center;
   justify-content: center;
   flex-direction: column;
-  font-weight: 700px;
+  font-weight: 700;
   font-size: 40px;
   color: #172b4d;
   padding: 10px 15px 15px 10px;
@@ -38,7 +38,7 @@
   flex-direction: row;
   align-items: flex-end;
   list-style: none;
-  padding: 5;
+  padding: 5px;
   gap: 20px;
 }
 
@@ -63,25 +63,24 @@
 }
 
 .mobile-menu-section {
-  top:0;
-  left:0;
-  position:fixed;
-  height:90%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 90%;
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
-  width:100%;
-  z-index:100;
+  width: 100%;
+  z-index: 100;
   background-color: white;
-  font-family: 'Inter',sans-serif;
-  
+  font-family: 'Inter', sans-serif;
 }
 
 .dash {
   position: fixed;
   bottom: 0;
-  width:25%;
+  width: 25%;
   border-bottom: 4px solid #3a4a42;
-  margin:0;
+  margin: 0;
   left: 37%;
 }
 
@@ -90,29 +89,30 @@
   height: 100%;
   margin-left: -8px;
   background-color: #e5e5e5;
-
   position: fixed;
 }
 
 .mobile-menu {
   max-width: 85%;
-  margin:50px auto;
-  color:white;
+  margin: 50px auto;
+  color: white;
 }
 
 .close-button {
   text-align: right;
 }
 
-.mobile-menu li { 
-  display: block; margin-bottom: 20px; 
-} 
-.mobile-menu a { 
-  text-decoration: none; 
-  color: #3a4a42; 
-  font-size: 25px; 
+.mobile-menu li {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #3a4a42;
+  font-size: 25px;
   font-weight: 600;
- } 
+}
 
 .project-container {
   display: grid;
@@ -143,7 +143,7 @@
 
 .image-placeholder {
   font-family: 'Inter', sans-serif;
-  font-style: 'semi-bold', italic;
+  font-style: italic;
   font-size: 24px;
   line-height: 32px;
   line-height: 110%;
@@ -272,7 +272,7 @@
 
 .last {
   font-family: 'Inter', sans-serif;
-  font-style: regular;
+  font-style: italic;
   font-size: 20px;
   height: 189px;
   font-weight: 400;
@@ -282,7 +282,7 @@
 
 .touch {
   font-family: 'Inter', sans-serif;
-  font-style: bold;
+  font-style: italic;
   font-size: 40px;
   text-align: center;
   align-items: center;
@@ -324,7 +324,7 @@ ul {
 }
 
 input {
-  padding: 1;
+  padding: 1px;
   margin-bottom: 24px;
   width: 300px;
   height: 48px;
@@ -457,7 +457,7 @@ textarea {
 
   .last {
     font-family: 'Inter', sans-serif;
-    font-style: regular;
+    font-style: italic;
     font-size: 20px;
     height: 189px;
     font-weight: 400;
@@ -608,7 +608,7 @@ textarea {
 
   .touch {
     font-family: 'Inter', sans-serif;
-    font-style: bold;
+    font-style: normal;
     font-size: 30px;
     text-align: center;
     align-items: center;
