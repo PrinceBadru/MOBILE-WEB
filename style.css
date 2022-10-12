@@ -748,11 +748,12 @@ textarea {
 .two-columns {
   display: flex;
   padding-top: 30px;
+  justify-content: space-between;
 }
 
 .two-columns h4 {
   font-size: 32px;
-  width: 70%;
+  width: 60%;
   padding: 0;
   margin: 0;
   padding-left: 20px; 
@@ -782,4 +783,33 @@ textarea {
 .display-centered a .btn-secondary {
   display:flex;
   justify-content: space-around;
+}
+
+.asscories .card-tags {
+  display:flex;
+  justify-content: flex-start;
+  margin-bottom: 36px;
+  width:70%;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
+}
+
+.card-tags li {
+  background-color: #ebecf0;
+  color: black;
+  font-size: 22px;
+  margin-right: 18px;
+  border-radius: 10px; 
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+.childs p {
+  padding-left: 20px;
+  font-size: 22px;
 }
