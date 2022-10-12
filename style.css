@@ -7,24 +7,25 @@
   display: none;
 }
 
-@media (min-width:768px){
+@media (min-width: 768px) {
   .design-new {
     display: flex;
-    width:100%;
+    width: 100%;
     flex-wrap: wrap;
   }
-  
+
   .design-new .project {
     display: flex;
-    width : 30%;
+    width: 30%;
     height: 474px;
     margin-right: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
+
     /* border:15px solid black; */
   }
 
-  .design-new .image-placeholder{
+  .design-new .image-placeholder {
     height: 250px;
   }
 }
@@ -159,9 +160,8 @@
   margin-bottom: 20px;
 }
 
-.image-placeholder img{
+.image-placeholder img {
   width: 100%;
-
 }
 
 .recent {
@@ -181,7 +181,7 @@
   background-color: #d0d9d4;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .btn {
@@ -698,26 +698,25 @@ textarea {
 .popup {
   position: fixed;
   top: 0;
-  bottom:0;
-  left:0;
-  right:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-color: #c1c7d0d7;
 }
-
 
 .card {
   position: fixed;
   top: 5%;
-  bottom:5%;
-  left:15%;
-  right:15%;
+  bottom: 5%;
+  left: 15%;
+  right: 15%;
   background-color: white;
   border-radius: 5px;
   overflow: hidden;
 }
 
-.card-header{
-  display:flex;
+.card-header {
+  display: flex;
   flex-direction: row-reverse;
   padding: 5px;
 }
@@ -731,18 +730,14 @@ textarea {
   height: 90%;
   display: flex;
   flex-direction: column;
-  padding-left:10px;
-  padding-top:10px;
-  padding-right:10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
   overflow-y: scroll;
 }
 
-.card-body img{
+.card-body img {
   width: 100%;
-}
-
-.card-body .two-columns {
-  flex-direction: row;
 }
 
 .two-columns {
@@ -751,12 +746,16 @@ textarea {
   justify-content: space-between;
 }
 
+.card-body .two-columns {
+  flex-direction: row;
+}
+
 .two-columns h4 {
   font-size: 32px;
   width: 60%;
   padding: 0;
   margin: 0;
-  padding-left: 20px; 
+  padding-left: 20px;
 }
 
 .card-body a img {
@@ -804,14 +803,12 @@ textarea {
 }
 
 .asscories .card-tags {
-  display:flex;
+  display: flex;
   justify-content: flex-start;
-  margin-bottom: 36px;
-  width:70%;
+  width: 70%;
   flex-wrap: wrap;
-  margin: 0;
+  margin: 0 0 36px 20px;
   padding: 0;
-  margin-left: 20px;
 }
 
 .card-tags li {
@@ -819,7 +816,7 @@ textarea {
   color: black;
   font-size: 22px;
   margin-right: 18px;
-  border-radius: 10px; 
+  border-radius: 10px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 5px;
@@ -832,32 +829,32 @@ textarea {
   font-size: 22px;
 }
 
-@media (max-width:768px){
-
-  .card-body{
+@media (max-width: 768px) {
+  .card-body {
     overflow-x: hidden;
   }
-  .display-centered{
-  display:none;
+
+  .display-centered {
+    display: none;
   }
 
   .childs p {
     padding-left: 20px;
     font-size: 16px;
-}
+  }
 
-  .mobile-buttons{
-    display:flex;
-    }
+  .mobile-buttons {
+    display: flex;
+  }
 
-    .asscories .card-tags {
-      display: flex;
-      justify-content: flex-start;
-      width: 100%;
-      flex-wrap: wrap;
-      margin: 0;
-      padding: 0;
-      margin-left: 20px;
+  .asscories .card-tags {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
   }
 
   .two-columns h4 {
@@ -866,35 +863,35 @@ textarea {
     padding: 0;
     margin: 0;
     padding-left: 20px;
-}
-
-.card-tags li {
-  background-color: #ebecf0;
-  color: black;
-  font-size: 16px;
-  margin-right: 18px;
-  border-radius: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-top: 10px;
-}
-
-.card-header {
-  position: absolute;
-  padding: 13px;
-  right: 0;
-  z-index: 500;
-}
-}
-
-@media (min-width:768px){
-  .display-centered{
-  display:flex;
   }
 
-  .mobile-buttons{
-    display:none;
-    }
+  .card-tags li {
+    background-color: #ebecf0;
+    color: black;
+    font-size: 16px;
+    margin-right: 18px;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+
+  .card-header {
+    position: absolute;
+    padding: 13px;
+    right: 0;
+    z-index: 500;
+  }
+}
+
+@media (min-width: 768px) {
+  .display-centered {
+    display: flex;
+  }
+
+  .mobile-buttons {
+    display: none;
+  }
 }

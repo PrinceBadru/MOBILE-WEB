@@ -15,7 +15,9 @@ mobileMenuOptions.forEach((element) => {
 });
 
 const popupSection = document.getElementById('popup');
-
+function closePopup() {
+  popupSection.classList.add('hide');
+}
 const myWorksArray = [
   {
     projectId: 1,
@@ -123,15 +125,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btn.addEventListener('click', () => {
       popupSection.classList.remove('hide');
-      const contains =
-        `<div class="card">
+      const contains = `<div class="card">
       <div class="card-header">
         <img class="close-button" id="closeButton" onClick="closePopup();" src="images/icons/cloasepopup.svg" alt="close Button"/>
       </div>
       <div class="card-body">
-        <img src="` +
-        myWorksArray[i].featuredImage +
-        `" alt="my work Portrait"/>
+        <img src="${
+  myWorksArray[i].featuredImage
+}" alt="my work Portrait"/>
         <div class="two-columns">
           <h4>Keeping track of hundreds of
             components</h4>
@@ -146,35 +147,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let newContains = '';
       for (let j = 0; j < myWorksArray[i].technologies.length; j += 1) {
-        let licontains = '<li>' + myWorksArray[i].technologies[j] + '</li>';
-        newContains = newContains + licontains;
+        const licontains = `<li>${myWorksArray[i].technologies[j]}</li>`;
+        newContains += licontains;
       }
-      const conatins2 =
-        `</ul>
+      const conatins2 = `</ul>
              
           </div>
-          <p>` +
-        myWorksArray[i].description +
-        `</p>
+          <p>${
+  myWorksArray[i].description
+}</p>
           <div class="mobile-buttons">
-            <a href="` +
-        myWorksArray[i].linkToLiveVersion +
-        `" class="btn-secondary">See Live <img src="images/icons/live.svg" alt="See PRoject Live"/></a>
-            <a href="` +
-        myWorksArray[i].linkToSource +
-        `" class="btn-secondary">See Source <img src="images/icons/github.svg" alt="See Source Code"/></a>
+            <a href="${
+  myWorksArray[i].linkToLiveVersion
+}" class="btn-secondary">See Live <img src="images/icons/live.svg" alt="See PRoject Live"/></a>
+            <a href="${
+  myWorksArray[i].linkToSource
+}" class="btn-secondary">See Source <img src="images/icons/github.svg" alt="See Source Code"/></a>
           </div>
         </div>
       </div>
     </div>`;
 
       popupSection.innerHTML += contains + newContains + conatins2;
-      // const closeButton = document.getElementById('closeButton');
+      const closeButton = document.getElementById('closeButton');
+      closeButton.addEventListener('click', () => {
+        closePopup();
+      });
     });
   }
 });
-function closePopup() {
-  popupSection.classList.add('hide');
-}
-
-// POpup on jS
