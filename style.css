@@ -713,6 +713,7 @@ textarea {
   right:15%;
   background-color: white;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .card-header{
@@ -727,17 +728,17 @@ textarea {
 }
 
 .card-body {
+  height: 80%;
   display: flex;
   flex-direction: column;
   padding-left:10px;
   padding-top:10px;
   padding-right:10px;
-  overflow-x: scroll;
+  overflow-y: scroll;
 }
 
 .card-body img{
   width: 100%;
-  overflow: hidden;
 }
 
 .card-body .two-columns {
