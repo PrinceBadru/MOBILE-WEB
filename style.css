@@ -759,32 +759,20 @@ textarea {
   padding-left: 20px; 
 }
 
+.card-body a img {
+  width: 20px;
+}
+
 .display-centered {
+  display: flex;
   justify-content: space-around;
-
 }
 
-.display-centered a img {
-  width: 25px;
-}
-
-.display-centered a {
-  font-size: 20px;
-  padding: 20px;
-  background: #36b37e;
-  color: white;
-  border: 0;
-  border-radius: 8px;
-  text-decoration: none;
-  font-family: Inherit, sans-serif;
-  font-weight: 500;
-}
-
-.btn-secondary {
+.display-centered .btn-secondary {
   border: 1px solid #36b37e;
   border-radius: 8px;
-  background-color: white;
-  color: #36b37e;
+  background: #36b37e;
+  color: white;
   width: 120px;
   padding: 5px;
   text-decoration: none;
@@ -792,6 +780,7 @@ textarea {
   display: flex;
   margin-right: 5px;
   justify-content: space-around;
+  align-items: center;
 }
 
 .asscories .card-tags {
