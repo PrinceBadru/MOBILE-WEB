@@ -728,7 +728,7 @@ textarea {
 }
 
 .card-body {
-  height: 80%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   padding-left:10px;
@@ -780,8 +780,17 @@ textarea {
   font-weight: 500;
 }
 
-.display-centered a .btn-secondary {
-  display:flex;
+.btn-secondary {
+  border: 1px solid #36b37e;
+  border-radius: 8px;
+  background-color: white;
+  color: #36b37e;
+  width: 120px;
+  padding: 5px;
+  text-decoration: none;
+  height: 27px;
+  display: flex;
+  margin-right: 5px;
   justify-content: space-around;
 }
 
