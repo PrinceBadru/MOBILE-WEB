@@ -2,11 +2,6 @@ const hamburger = document.querySelector('#hamburger');
 const close = document.querySelector('#close');
 const portfolio = document.querySelector('#portfolio');
 const mobileMenuOptions = document.querySelectorAll('.mobile-menu-option');
-<<<<<<< HEAD
-=======
-const popup = document.querySelector('#popup');
-
->>>>>>> 139e515 (Fixed linters)
 hamburger.addEventListener('click', () => {
   portfolio.classList.remove('hide');
 });
@@ -19,13 +14,10 @@ mobileMenuOptions.forEach((element) => {
   });
 });
 
-<<<<<<< HEAD
 const popupSection = document.getElementById('popup');
 function closePopup() {
   popupSection.classList.add('hide');
 }
-=======
->>>>>>> 139e515 (Fixed linters)
 const myWorksArray = [
   {
     projectId: 1,
@@ -76,12 +68,8 @@ const myWorksArray = [
     technologies: ['html', 'css', 'javascript', 'bootstrap'],
     linkToLiveVersion: 'liveversion.com',
     linkToSource: 'github.com/PrinceBadru',
-<<<<<<< HEAD
   },
   {
-=======
-  }, {
->>>>>>> 139e515 (Fixed linters)
     projectId: 6,
     name: 'Multi-Post Stories Gain+Glory',
     description:
@@ -136,7 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
     butt.appendChild(btn);
 
     btn.addEventListener('click', () => {
-<<<<<<< HEAD
       popupSection.classList.remove('hide');
       const contains = `<div class="card">
       <div class="card-header">
@@ -186,9 +173,6 @@ document.addEventListener('DOMContentLoaded', () => {
       closeButton.addEventListener('click', () => {
         closePopup();
       });
-=======
-      popup.classList.remove('hide');
->>>>>>> 139e515 (Fixed linters)
     });
   }
 });
