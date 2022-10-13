@@ -7,6 +7,29 @@
   display: none;
 }
 
+@media (min-width: 768px) {
+  .design-new {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .design-new .project {
+    display: flex;
+    width: 30%;
+    height: 474px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    /* border:15px solid black; */
+  }
+
+  .design-new .image-placeholder {
+    height: 250px;
+  }
+}
+
 .second {
   background-image: url(./images/header-illsutration-mobile@2x.png);
   background-repeat: no-repeat;
@@ -126,7 +149,7 @@
 .project {
   border: 1px solid green;
   margin: 0;
-  width: 327px;
+  width: 100%;
   padding: 0;
   border-radius: 8px;
   height: 474px;
@@ -134,6 +157,11 @@
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  margin-bottom: 20px;
+}
+
+.image-placeholder img {
+  width: 100%;
 }
 
 .recent {
@@ -153,6 +181,7 @@
   background-color: #d0d9d4;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  overflow: hidden;
 }
 
 .btn {
@@ -662,6 +691,202 @@ textarea {
   }
 
   .resume-container {
+    display: none;
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #c1c7d0d7;
+}
+
+.card {
+  position: fixed;
+  top: 5%;
+  bottom: 5%;
+  left: 15%;
+  right: 15%;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 5px;
+}
+
+.card-header .close-button {
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.card-body {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  overflow-y: scroll;
+}
+
+.card-body img {
+  width: 100%;
+}
+
+.two-columns {
+  display: flex;
+  padding-top: 30px;
+  justify-content: space-between;
+}
+
+.card-body .two-columns {
+  flex-direction: row;
+}
+
+.two-columns h4 {
+  font-size: 32px;
+  width: 60%;
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.card-body a img {
+  width: 20px;
+}
+
+.mobile-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.display-centered .btn-secondary {
+  border: 1px solid #36b37e;
+  border-radius: 8px;
+  background: #36b37e;
+  color: white;
+  width: 110px;
+  padding: 5px;
+  text-decoration: none;
+  height: 27px;
+  display: flex;
+  margin-right: 5px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mobile-buttons .btn-secondary {
+  border: 1px solid #36b37e;
+  border-radius: 8px;
+  background: #36b37e;
+  color: white;
+  width: 120px;
+  padding: 5px;
+  text-decoration: none;
+  height: 27px;
+  display: flex;
+  margin-right: 5px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.asscories .card-tags {
+  display: flex;
+  justify-content: flex-start;
+  width: 70%;
+  flex-wrap: wrap;
+  margin: 0 0 36px 20px;
+  padding: 0;
+}
+
+.card-tags li {
+  background-color: #ebecf0;
+  color: black;
+  font-size: 22px;
+  margin-right: 18px;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+.childs p {
+  padding-left: 20px;
+  font-size: 22px;
+}
+
+@media (max-width: 768px) {
+  .card-body {
+    overflow-x: hidden;
+  }
+
+  .display-centered {
+    display: none;
+  }
+
+  .childs p {
+    padding-left: 20px;
+    font-size: 16px;
+  }
+
+  .mobile-buttons {
+    display: flex;
+  }
+
+  .asscories .card-tags {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+  }
+
+  .two-columns h4 {
+    font-size: 25px;
+    width: 60%;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .card-tags li {
+    background-color: #ebecf0;
+    color: black;
+    font-size: 16px;
+    margin-right: 18px;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+
+  .card-header {
+    position: absolute;
+    padding: 13px;
+    right: 0;
+    z-index: 500;
+  }
+}
+
+@media (min-width: 768px) {
+  .display-centered {
+    display: flex;
+  }
+
+  .mobile-buttons {
     display: none;
   }
 }

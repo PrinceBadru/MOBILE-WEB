@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <main id="main">
     <header class="first">
         <div class="first-img"><img src="./images/Welcome.png" alt="welcome button at the top left"></div>
         <div class="first-img" id="hamburger" > <img src="./images/Union.png" alt="a union of three vectors"> </div>
@@ -21,7 +21,7 @@
 
     </header>
     <br>
-    <section class="full-section" id="portfolio">
+    <section class="full-section hide" id="portfolio">
         <div class="mobile-menu-section">
             <div class="mobile-menu">
                 <div class="close-button" id="close" > <img src="./images/close.svg" alt="a union of three vectors"> </div>
@@ -51,87 +51,17 @@
     </section>
            
            
-            <section class = "work-section">
-             <h2 class ="recent" >My Recent Works</h2>
-             <hr class="line">
+    <section class = "work-section">
+        <h2 class ="recent" >My Recent Works</h2>
+        <hr class="line">
+        <div class ="project-container">
             
             <div class ="project-container">
-                <div class="design-1">
-                <article class="project">
-                    <div class ="image-placeholder"></div>
-                    <h3 class="multi">Multi-Post Stories Gain+Glory</h3>
-                    <ul class ="lang">
-                        <li class="language">html</li>
-                        <li class="language">css</li>
-                        <li class="language">javascript</li>
-                        <li class="language">Ruby on rails</li>
-                    </ul>
-                    <div class="butt"><button class="btn" type="button"> See Project</button></div>
-                </article>
-                <article class="project">
-                    <div class ="image-placeholder"></div>
-                    <h3 class="multi">Multi-Post Stories Gain+Glory</h3>
-                    <ul class ="lang">
-                        <li class="language">html</li>
-                        <li class="language">css</li>
-                        <li class="language">javascript</li>
-                        <li class="language">Ruby on rails</li>
-                    </ul>
-                    <div class="butt"><button class="btn" type="button"> See Project</button></div>
-                </article>
-                </div>
-                <div class="design-2">
-                <article class="project">
-                    <div class ="image-placeholder"></div>
-                    <h3 class="multi">Multi-Post Stories Gain+Glory</h3>
-                    <ul class ="lang">
-                        <li class="language">html</li>
-                        <li class="language">css</li>
-                        <li class="language">javascript</li>
-                        <li class="language">Ruby on rails</li>
-                    </ul>
-                    <div class="butt"><button class="btn" type="button"> See Project</button></div>
-                </article>
-                
-                <article class="project">
-                    <div class ="image-placeholder"></div>
-                    <h3 class="multi">Multi-Post Stories Gain+Glory</h3>
-                    <ul class ="lang">
-                        <li class="language">html</li>
-                        <li class="language">css</li>
-                        <li class="language">javascript</li>
-                        <li class="language">Ruby on rails</li>
-                    </ul>
-                    <div class="butt"><button class="btn" type="button"> See Project</button></div>
-                </article> 
-            </div>
-                <div class="design-3">
-                <article class="project">
-                    <div class ="image-placeholder"></div>
-                    <h3 class="multi">Multi-Post Stories Gain+Glory</h3>
-                    <ul class ="lang">
-                        <li class="language">html</li>
-                        <li class="language">css</li>
-                        <li class="language">javascript</li>
-                        <li class="language">Ruby on rails</li>
-                    </ul>
-                    <div class="butt"><button class="btn" type="button"> See Project</button></div>
-                </article>
-                 <article class="project">
-                    <div class ="image-placeholder"></div>
-                    <h3 class="multi">Multi-Post Stories Gain+Glory</h3>
-                    <ul class ="lang">
-                        <li class="language">html</li>
-                        <li class="language">css</li>
-                        <li class="language">javascript</li>
-                        <li class="language">Ruby on rails</li>
-                    </ul>
-                    <div class="butt"><button class="btn" type="button"> See Project</button></div>
-                </article>
-                </div>
-                </div>
-            </div>
-            </section>
+                <div class ="project-container">
+                    <div class="design-new" id="designNew">
+                    
+                    </div>
+    </section>
 
             <section class="aboutme-background" id="about">
             <section class="aboutme section">
@@ -210,7 +140,7 @@
                     </div>
                 
                     <div class="contact-form">
-                 <form action="https://formspree.io/f/mjvzwlqy" method="post">
+                 <form action="https://formspree.io/f/mjvzwlqy" id="form" method="post">
                    
                     <ul>
                         
@@ -230,6 +160,7 @@
                                 <textarea name="user_message" id="msg" cols="30" rows="5" maxlength="500" placeholder="Enter text here" required></textarea>
                             </label>
                         </li>
+                        <li><small class="error-message" id="errorMessage"></small></li>
                         <li class="button back-image">
                             <button type="submit" class="btn">Get in touch</button>
                         </li>
@@ -257,6 +188,43 @@
 
            
         </footer>
+    </main>
+
+    <section class="popup hide" id="popup">
+<<<<<<< HEAD
+       
+=======
+        <div class="card">
+            <div class="card-header">
+                <img class="close-button" id="shatter" src="images/icons/cloasepopup.svg" alt="close Button"/>
+            </div>
+            <div class="card-body">
+                <img src="/images/works/SnapshootPortfolio.svg" alt="my work Portrait"/>
+                <div class="child-class">
+                    <div class="two-columns">
+                        <h4>Keeping track of hundreds of
+                            components</h4>
+                        <div class="display-centered">
+                            <a href="" class="btn-secondary">See Live <img src="images/icons/live.svg" alt="See PRoject Live"/></a>
+                            <a href="" class="btn-secondary">See Source <img src="images/icons/github.svg" alt="See Source Code"/></a>
+                        </div>
+                    </div>
+                    <div class="childs">
+                        <div class="asscories">
+                            <ul class="card-tags">
+                                <li>html</li>
+                                <li>css</li>
+                                <li>javascript</li>
+                            </ul>
+                        </div>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. em Ipsum is simply dummy text of the printing and typesetting industry. em Ipsum is simply dummy text of the printing and typesetting industry. em Ipsum is simply dummy text of the printing and typesetting industry. em Ipsum is simply dummy text of the printing and typesetting industry. em Ipsum is simply dummy text of the printing and typesetting industry. em Ipsum is simply dummy text of the printing and typesetting industry. em Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+>>>>>>> 139e515 (Fixed linters)
+    </section>
 
         <script src="main.js" type="text/javascript"></script>
 
