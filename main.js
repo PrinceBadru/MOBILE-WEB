@@ -130,9 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <img class="close-button" id="closeButton" onClick="closePopup();" src="images/icons/cloasepopup.svg" alt="close Button"/>
       </div>
       <div class="card-body">
-        <img src="${
-  myWorksArray[i].featuredImage
-}" alt="my work Portrait"/>
+        <img src="${myWorksArray[i].featuredImage}" alt="my work Portrait"/>
         <div class="two-columns">
           <h4>Keeping track of hundreds of
             components</h4>
@@ -153,16 +151,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const conatins2 = `</ul>
              
           </div>
-          <p>${
-  myWorksArray[i].description
-}</p>
+          <p>${myWorksArray[i].description}</p>
           <div class="mobile-buttons">
-            <a href="${
-  myWorksArray[i].linkToLiveVersion
-}" class="btn-secondary">See Live <img src="images/icons/live.svg" alt="See PRoject Live"/></a>
-            <a href="${
-  myWorksArray[i].linkToSource
-}" class="btn-secondary">See Source <img src="images/icons/github.svg" alt="See Source Code"/></a>
+            <a href="${myWorksArray[i].linkToLiveVersion}" class="btn-secondary">See Live <img src="images/icons/live.svg" alt="See PRoject Live"/></a>
+            <a href="${myWorksArray[i].linkToSource}" class="btn-secondary">See Source <img src="images/icons/github.svg" alt="See Source Code"/></a>
           </div>
         </div>
       </div>
@@ -175,4 +167,22 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+});
+// form Validation
+const form = document.getElementById('form');
+const email = document.getElementById('mail');
+const messageBox = document.getElementById('errorMessage');
+
+function compareAndAlert() {
+  if (email.value === email.value.toLowerCase()) {
+    form.submit();
+    form.reset();
+  } else {
+    messageBox.innerHTML = 'Your email should be in lowercase*';
+  }
+}
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  compareAndAlert();
 });
