@@ -2,6 +2,13 @@ const hamburger = document.querySelector('#hamburger');
 const close = document.querySelector('#close');
 const portfolio = document.querySelector('#portfolio');
 const mobileMenuOptions = document.querySelectorAll('.mobile-menu-option');
+
+const form = document.getElementById('form');
+const emailElement = document.getElementById('mail');
+const nameElement = document.getElementById('name');
+const msgElement = document.getElementById('msg');
+const messageBox = document.getElementById('errorMessage');
+
 hamburger.addEventListener('click', () => {
   portfolio.classList.remove('hide');
 });
@@ -167,14 +174,24 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-});
-// form Validation
-const form = document.getElementById('form');
-const email = document.getElementById('mail');
-const messageBox = document.getElementById('errorMessage');
 
+
+});
+
+//Save Data TO Local Storage
+function saveToLocalStorage() {
+  let formData = {
+    name: nameElement.value,
+    email: emailElement.value,
+    message: msgElement.value,
+  };
+  localStorage.setItem('formData', JSON.stringify(formData));
+}
+
+// form Validation
 function compareAndAlert() {
-  if (email.value === email.value.toLowerCase()) {
+  if (emailElement.value === emailElement.value.toLowerCase()) {
+    saveToLocalStorage();
     form.submit();
     form.reset();
   } else {
