@@ -168,6 +168,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+// form Validation
+const form = document.getElementById('form');
+const email = document.getElementById('mail');
+
 function compareAndAlert() {
   if (email.value === email.value.toLowerCase()) {
     form.submit();
@@ -177,9 +181,6 @@ function compareAndAlert() {
   }
 }
 
-// form Validation
-const form = document.getElementById('form');
-const email = document.getElementById('mail');
 const messageBox = document.getElementById('errorMessage');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
