@@ -176,9 +176,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   let getData = JSON.parse(localStorage.getItem('formData'));
-  nameElement.value = getData.name;
-  emailElement.value = getData.email;
-  msgElement.value = getData.message;
+  if (getData != null) {
+    nameElement.value = getData.name;
+    emailElement.value = getData.email;
+    msgElement.value = getData.message;
+  }
 });
 
 //Save Data TO Local Storage
@@ -194,7 +196,6 @@ function saveToLocalStorage() {
 // form Validation
 function compareAndAlert() {
   if (emailElement.value === emailElement.value.toLowerCase()) {
-    saveToLocalStorage();
     form.submit();
     form.reset();
   } else {
@@ -205,4 +206,12 @@ function compareAndAlert() {
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   compareAndAlert();
+});
+
+const formInputs = document.querySelectorAll('.form-data');
+
+formInputs.forEach((item) => {
+  item.addEventListener('keypress', () => {
+    saveToLocalStorage();
+  });
 });
