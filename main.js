@@ -175,7 +175,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
+  let getData = JSON.parse(localStorage.getItem('formData'));
+  nameElement.value = getData.name;
+  emailElement.value = getData.email;
+  msgElement.value = getData.message;
 });
 
 //Save Data TO Local Storage
