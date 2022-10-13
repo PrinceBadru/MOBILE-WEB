@@ -173,7 +173,6 @@ const form = document.getElementById('form');
 const email = document.getElementById('mail');
 const messageBox = document.getElementById('errorMessage');
 
-
 function compareAndAlert() {
   if (email.value === email.value.toLowerCase()) {
     form.submit();
