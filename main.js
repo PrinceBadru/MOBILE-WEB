@@ -168,10 +168,4 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-
-
-
 });
-
-
-
