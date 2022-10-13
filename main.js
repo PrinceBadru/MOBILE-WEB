@@ -3,12 +3,6 @@ const close = document.querySelector('#close');
 const portfolio = document.querySelector('#portfolio');
 const mobileMenuOptions = document.querySelectorAll('.mobile-menu-option');
 
-const form = document.getElementById('form');
-const emailElement = document.getElementById('mail');
-const nameElement = document.getElementById('name');
-const msgElement = document.getElementById('msg');
-const messageBox = document.getElementById('errorMessage');
-
 hamburger.addEventListener('click', () => {
   portfolio.classList.remove('hide');
 });
@@ -175,43 +169,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  let getData = JSON.parse(localStorage.getItem('formData'));
-  if (getData != null) {
-    nameElement.value = getData.name;
-    emailElement.value = getData.email;
-    msgElement.value = getData.message;
-  }
+
+
 });
 
-//Save Data TO Local Storage
-function saveToLocalStorage() {
-  let formData = {
-    name: nameElement.value,
-    email: emailElement.value,
-    message: msgElement.value,
-  };
-  localStorage.setItem('formData', JSON.stringify(formData));
-}
 
-// form Validation
-function compareAndAlert() {
-  if (emailElement.value === emailElement.value.toLowerCase()) {
-    form.submit();
-    form.reset();
-  } else {
-    messageBox.innerHTML = 'Your email should be in lowercase*';
-  }
-}
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  compareAndAlert();
-});
-
-const formInputs = document.querySelectorAll('.form-data');
-
-formInputs.forEach((item) => {
-  item.addEventListener('keypress', () => {
-    saveToLocalStorage();
-  });
-});
