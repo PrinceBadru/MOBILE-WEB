@@ -768,7 +768,27 @@ textarea {
   justify-content: space-around;
 }
 
+.mobile-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
 .display-centered .btn-secondary {
+  border: 1px solid #36b37e;
+  border-radius: 8px;
+  background: #36b37e;
+  color: white;
+  width: 110px;
+  padding: 5px;
+  text-decoration: none;
+  height: 27px;
+  display: flex;
+  margin-right: 5px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mobile-buttons .btn-secondary {
   border: 1px solid #36b37e;
   border-radius: 8px;
   background: #36b37e;
@@ -810,4 +830,64 @@ textarea {
 .childs p {
   padding-left: 20px;
   font-size: 22px;
+}
+
+@media (max-width:768px){
+
+  .card-body{
+    overflow-x: hidden;
+  }
+  .display-centered{
+  display:none;
+  }
+
+  .childs p {
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+  .mobile-buttons{
+    display:flex;
+    }
+
+    .asscories .card-tags {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      margin-left: 20px;
+  }
+
+  .two-columns h4 {
+    font-size: 25px;
+    width: 60%;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.card-tags li {
+  background-color: #ebecf0;
+  color: black;
+  font-size: 16px;
+  margin-right: 18px;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 10px;
+}
+}
+
+@media (min-width:768px){
+  .display-centered{
+  display:flex;
+  }
+
+  .mobile-buttons{
+    display:none;
+    }
 }
