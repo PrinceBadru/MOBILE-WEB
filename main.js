@@ -14,6 +14,7 @@ mobileMenuOptions.forEach((element) => {
   });
 });
 
+const popupSection = document.getElementById('popup');
 
 const myWorksArray = [
   {
@@ -65,7 +66,8 @@ const myWorksArray = [
     technologies: ['html', 'css', 'javascript', 'bootstrap'],
     linkToLiveVersion: 'liveversion.com',
     linkToSource: 'github.com/PrinceBadru',
-  },{
+  },
+  {
     projectId: 6,
     name: 'Multi-Post Stories Gain+Glory',
     description:
@@ -74,9 +76,8 @@ const myWorksArray = [
     technologies: ['html', 'css', 'javascript', 'bootstrap'],
     linkToLiveVersion: 'liveversion.com',
     linkToSource: 'github.com/PrinceBadru',
-  }
+  },
 ];
-
 
 // Dynamic Implentation of the My WOrk Section
 const designNew = document.getElementById('designNew');
@@ -110,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
       language.innerHTML = myWorksArray[i].technologies[j];
       lang.appendChild(language);
     }
-    
+
     const butt = document.createElement('div');
     butt.className += 'butt';
     articleP.appendChild(butt);
@@ -120,10 +121,60 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.innerHTML = ' See Project';
     butt.appendChild(btn);
 
-
     btn.addEventListener('click', () => {
-      alert('clicked' +myWorksArray[i].name );
-    });
+      popupSection.classList.remove('hide');
+      const contains =
+        `<div class="card">
+      <div class="card-header">
+        <img class="close-button" id="closeButton" onClick="closePopup();" src="images/icons/cloasepopup.svg" alt="close Button"/>
+      </div>
+      <div class="card-body">
+        <img src="` +
+        myWorksArray[i].featuredImage +
+        `" alt="my work Portrait"/>
+        <div class="two-columns">
+          <h4>Keeping track of hundreds of
+            components</h4>
+          <div class="display-centered">
+            <a href="" class="btn-secondary">See Live <img src="images/icons/live.svg" alt="See PRoject Live"/></a>
+            <a href="" class="btn-secondary">See Source <img src="images/icons/github.svg" alt="See Source Code"/></a>
+          </div>
+        </div>
+        <div class="childs">
+          <div class="asscories">
+            <ul class="card-tags">`;
 
+      let newContains = '';
+      for (let j = 0; j < myWorksArray[i].technologies.length; j += 1) {
+        let licontains = '<li>' + myWorksArray[i].technologies[j] + '</li>';
+        newContains = newContains + licontains;
+      }
+      const conatins2 =
+        `</ul>
+             
+          </div>
+          <p>` +
+        myWorksArray[i].description +
+        `</p>
+          <div class="mobile-buttons">
+            <a href="` +
+        myWorksArray[i].linkToLiveVersion +
+        `" class="btn-secondary">See Live <img src="images/icons/live.svg" alt="See PRoject Live"/></a>
+            <a href="` +
+        myWorksArray[i].linkToSource +
+        `" class="btn-secondary">See Source <img src="images/icons/github.svg" alt="See Source Code"/></a>
+          </div>
+        </div>
+      </div>
+    </div>`;
+
+      popupSection.innerHTML += contains + newContains + conatins2;
+      // const closeButton = document.getElementById('closeButton');
+    });
   }
 });
+function closePopup() {
+  popupSection.classList.add('hide');
+}
+
+// POpup on jS
